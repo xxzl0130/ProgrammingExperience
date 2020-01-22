@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/NapkinFolder">
+        <file>Resources/banner.png</file>
+        <file>Resources/banner400.png</file>
+        <file>Resources/icon.ico</file>
+    </qresource>
+</RCC>
