@@ -1,0 +1,10 @@
+{
+	"screw pitch":5,
+	"subdivision":400,
+	"speed":20,
+	"single step":1000,
+	"unit":"mm,pulse/circle,mm/s,mm",
+	"camera index":0,
+	"video width":640,
+	"video height":480
+}

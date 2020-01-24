@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/MainWindow">
+        <file>Resources/image/banner.png</file>
+        <file>Resources/image/icon.ico</file>
+    </qresource>
+</RCC>
