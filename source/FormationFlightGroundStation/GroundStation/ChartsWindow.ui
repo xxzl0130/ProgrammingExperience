@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChartsWindow</class>
+ <widget class="QMainWindow" name="ChartsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>数据监视</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QChartView" name="heightChartView"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QChartView" name="speedChartView"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QChartView" name="phiChartView"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QChartView" name="miuChartView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="saveAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>更新速度</string>
+    </property>
+    <addaction name="time0Action"/>
+    <addaction name="time05Action"/>
+    <addaction name="time1Action"/>
+    <addaction name="time5Action"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>横轴长度</string>
+    </property>
+    <addaction name="x5Action"/>
+    <addaction name="x10Action"/>
+    <addaction name="x30Action"/>
+    <addaction name="x60Action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="saveAction">
+   <property name="text">
+    <string>导出数据</string>
+   </property>
+  </action>
+  <action name="time0Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>立即</string>
+   </property>
+  </action>
+  <action name="time05Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>0.5秒</string>
+   </property>
+  </action>
+  <action name="time1Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1秒</string>
+   </property>
+  </action>
+  <action name="time5Action">
+   <property name="text">
+    <string>5秒</string>
+   </property>
+  </action>
+  <action name="x5Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>5秒</string>
+   </property>
+  </action>
+  <action name="x10Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>10秒</string>
+   </property>
+  </action>
+  <action name="x30Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>30秒</string>
+   </property>
+  </action>
+  <action name="x60Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>60秒</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header>QtCharts/QChartView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/SimulationWindow">
+        <file>Resources/airplane.png</file>
+    </qresource>
+</RCC>

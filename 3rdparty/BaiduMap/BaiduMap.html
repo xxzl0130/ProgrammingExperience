@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html>  
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+        </style>
+        <title>百度地图离线版</title>
+    </head>
+    <body>
+        <div id="allmap"></div>
+    </body>
+    <script type="text/javascript" src="map_load.js"></script>
+    <script type="text/javascript" src="./modules/DrawingManager_min.js"></script>
+    <link rel="stylesheet" href="./modules/DrawingManager_min.css"/>
+    <script type="text/javascript" src="./BaiduMap.js"></script>
+    <script type="text/javascript" src="./qwebchannel.js"></script>
+	<style>/*去除百度地图版权*/
+		.BMap_cpyCtrl{
+		display:none;
+		} 
+		</style>
+    <script type="text/javascript"> 
+    // 启动加载函数
+    var bridge = null;
+    window.onload = function() {
+	    //output("安装 QWebChannel.");
+        new QWebChannel(qt.webChannelTransport, function(channel) {
+        // 获取Qt类交互对象
+    	bridge = channel.objects.bridge;
+    	// 链接Qt类信号函数
+        bridge.drawPath.connect(drawPath);
+        bridge.clearPath.connect(clearPath);
+	    // 调用Qt类公有函数
+        bridge.receiveInfo("Client connected, 准备发送、接收数据!");
+        // 通知初始化完成
+        bridge.receiveInitComplete();
+        });
+    }
+    </script>  
+</html>

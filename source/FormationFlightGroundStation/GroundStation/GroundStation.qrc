@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/GroundStation">
+        <file>Resources/location.png</file>
+        <file>Resources/stats-dots.png</file>
+        <file>Resources/link24.png</file>
+        <file>Resources/unlink24.png</file>
+        <file>Resources/error.mp3</file>
+        <file>Resources/fatal.mp3</file>
+        <file>Resources/warning.mp3</file>
+    </qresource>
+</RCC>
