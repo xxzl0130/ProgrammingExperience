@@ -12,11 +12,11 @@
 
 ## 主要技术
 * Qt
-* OpenCV
+* OpenCV-实现目标检测定位，物理位置解算
 * 多线程
 * Arduino
 * 步进电机
 
 ## 开发平台
-Windows，VS 2019，Qt 5, Ardunio for VS
+Windows，VS 2019，Qt 5, Ardunio for VS  
 ![运行截图](../source/asset/FeedingSystem.png "运行截图")

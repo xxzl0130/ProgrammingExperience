@@ -20,3 +20,4 @@ __注意：binary和source文件夹下的任何文件/项目/素材如无特别�
 * [餐巾折叠机上位机](/document/NapkinFolder.md)
 * [布料上料系统](/document/FeedingSystem.md)
 * [无人机编队飞行](/document/FormationFlight.md)
+* [少女前线代理工具系列](/document/GirlsFrontlineProxy.md)
