@@ -1,0 +1,7 @@
+{
+    "flashTime": "2330",
+    "model": "C:/Users/TR/Documents/rl-0.7.0/examples/rlplan/unimation-puma560_boxes_rrtConCon.xml",
+    "netID": "127.0.0.1.1.1",
+    "port": "0x8888",
+	"parameterJson":"./parameters.json"
+}

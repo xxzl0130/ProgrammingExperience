@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:param name="x1" select="0.0"/>
+	<xsl:param name="x2" select="-0.3638"/>
+	<xsl:param name="x3" select="-0.0203"/>
+	<xsl:param name="x4" select="0.0"/>
+	<xsl:param name="x5" select="0.0"/>
+	<xsl:param name="x6" select="0.0"/>
+	<xsl:param name="y1" select="0.0"/>
+	<xsl:param name="y2" select="0.006"/>
+	<xsl:param name="y3" select="-0.0141"/>
+	<xsl:param name="y4" select="0.019"/>
+	<xsl:param name="y5" select="0.0"/>
+	<xsl:param name="y6" select="0.0"/>
+	<xsl:param name="z1" select="0.0"/>
+	<xsl:param name="z2" select="0.2275"/>
+	<xsl:param name="z3" select="0.07"/>
+	<xsl:param name="z4" select="0.0"/>
+	<xsl:param name="z5" select="0.0"/>
+	<xsl:param name="z6" select="0.032"/>
+	<xsl:param name="Ixx1" select="0.0"/>
+	<xsl:param name="Ixx2" select="0.13"/>
+	<xsl:param name="Ixx3" select="0.066"/>
+	<xsl:param name="Ixx4" select="1.8e-3"/>
+	<xsl:param name="Ixx5" select="0.3e-3"/>
+	<xsl:param name="Ixx6" select="0.15e-3"/>
+	<xsl:param name="Iyy1" select="0.035"/>
+	<xsl:param name="Iyy2" select="0.524"/>
+	<xsl:param name="Iyy3" select="0.086"/>
+	<xsl:param name="Iyy4" select="1.3e-3"/>
+	<xsl:param name="Iyy5" select="0.4e-3"/>
+	<xsl:param name="Iyy6" select="0.15e-3"/>
+	<xsl:param name="Izz1" select="0.0"/>
+	<xsl:param name="Izz2" select="0.539"/>
+	<xsl:param name="Izz3" select="0.0125"/>
+	<xsl:param name="Izz4" select="1.8e-3"/>
+	<xsl:param name="Izz5" select="0.3e-3"/>
+	<xsl:param name="Izz6" select="0.04e-3"/>
+	<xsl:param name="Ixy1" select="0.0"/>
+	<xsl:param name="Ixy2" select="0.0"/>
+	<xsl:param name="Ixy3" select="0.0"/>
+	<xsl:param name="Ixy4" select="0.0"/>
+	<xsl:param name="Ixy5" select="0.0"/>
+	<xsl:param name="Ixy6" select="0.0"/>
+	<xsl:param name="Iyz1" select="0.0"/>
+	<xsl:param name="Iyz2" select="0.0"/>
+	<xsl:param name="Iyz3" select="0.0"/>
+	<xsl:param name="Iyz4" select="0.0"/>
+	<xsl:param name="Iyz5" select="0.0"/>
+	<xsl:param name="Iyz6" select="0.0"/>
+	<xsl:param name="Ixz1" select="0.0"/>
+	<xsl:param name="Ixz2" select="0.0"/>
+	<xsl:param name="Ixz3" select="0.0"/>
+	<xsl:param name="Ixz4" select="0.0"/>
+	<xsl:param name="Ixz5" select="0.0"/>
+	<xsl:param name="Ixz6" select="0.0"/>
+	<xsl:param name="m1" select="0.0"/>
+	<xsl:param name="m2" select="17.4"/>
+	<xsl:param name="m3" select="4.8"/>
+	<xsl:param name="m4" select="0.82"/>
+	<xsl:param name="m5" select="0.34"/>
+	<xsl:param name="m6" select="0.09"/>
+	<xsl:param name="a1" select="0.0"/>
+	<xsl:param name="a2" select="0.0"/>
+	<xsl:param name="a3" select="0.3637"/>
+	<xsl:param name="a4" select="0.384"/>
+	<xsl:param name="a5" select="0.0"/>
+	<xsl:param name="a6" select="0.0"/>
+	<xsl:param name="d1" select="0.0843"/>
+	<xsl:param name="d2" select="0.0"/>
+	<xsl:param name="d3" select="0.0"/>
+	<xsl:param name="d4" select="-0.0993"/>
+	<xsl:param name="d5" select="0.1023"/>
+	<xsl:param name="d6" select="0.0568"/>
+	<xsl:template match="/">
+		<rlmdl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rlmdl.xsd">
+			<model>
+				<manufacturer>TR</manufacturer>
+				<name>Puma Robot</name>
+				<world id="world">
+					<rotation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</translation>
+					<g>
+						<x>0</x>
+						<y>0</y>
+						<z>9.86055</z>
+					</g>
+				</world>
+				<body id="body0">
+					<ignore/>
+					<ignore idref="body1"/>
+				</body>
+				<frame id="frame0"/>
+				<frame id="frame1"/>
+				<body id="body1">
+					<cm>
+							<x><xsl:value-of select="$x1"/></x>
+							<y><xsl:value-of select="$y1"/></y>
+							<z><xsl:value-of select="$z1"/></z>
+					</cm>
+					<i>
+							<xx><xsl:value-of select="$Ixx1"/></xx>
+							<yy><xsl:value-of select="$Iyy1"/></yy>
+							<zz><xsl:value-of select="$Izz1"/></zz>
+							<xy><xsl:value-of select="$Ixy1"/></xy>
+							<yz><xsl:value-of select="$Iyz1"/></yz>
+							<xz><xsl:value-of select="$Ixz1"/></xz>
+					</i>
+					<ignore idref="body0"/>
+					<ignore idref="body2"/>
+					<m><xsl:value-of select="$m1"/></m>
+				</body>
+				<frame id="frame2"/>
+				<body id="body2">
+					<cm>
+							<x><xsl:value-of select="$x2"/></x>
+							<y><xsl:value-of select="$y2"/></y>
+							<z><xsl:value-of select="$z2"/></z>
+					</cm>
+					<i>
+							<xx><xsl:value-of select="$Ixx2"/></xx>
+							<yy><xsl:value-of select="$Iyy2"/></yy>
+							<zz><xsl:value-of select="$Izz2"/></zz>
+							<xy><xsl:value-of select="$Ixy2"/></xy>
+							<yz><xsl:value-of select="$Iyz2"/></yz>
+							<xz><xsl:value-of select="$Ixz2"/></xz>
+					</i>
+					<ignore idref="body1"/>
+					<ignore idref="body3"/>
+					<ignore idref="body4"/>
+					<m><xsl:value-of select="$m2"/></m>
+				</body>
+				<frame id="frame3"/>
+				<body id="body3">
+					<cm>
+							<x><xsl:value-of select="$x3"/></x>
+							<y><xsl:value-of select="$y3"/></y>
+							<z><xsl:value-of select="$z3"/></z>
+					</cm>
+					<i>
+							<xx><xsl:value-of select="$Ixx3"/></xx>
+							<yy><xsl:value-of select="$Iyy3"/></yy>
+							<zz><xsl:value-of select="$Izz3"/></zz>
+							<xy><xsl:value-of select="$Ixy3"/></xy>
+							<yz><xsl:value-of select="$Iyz3"/></yz>
+							<xz><xsl:value-of select="$Ixz3"/></xz>
+					</i>
+					<ignore idref="body2"/>
+					<ignore idref="body4"/>
+					<m><xsl:value-of select="$m3"/></m>
+				</body>
+				<frame id="frame4"/>
+				<body id="body4">
+					<cm>
+							<x><xsl:value-of select="$x4"/></x>
+							<y><xsl:value-of select="$y4"/></y>
+							<z><xsl:value-of select="$z4"/></z>
+					</cm>
+					<i>
+							<xx><xsl:value-of select="$Ixx4"/></xx>
+							<yy><xsl:value-of select="$Iyy4"/></yy>
+							<zz><xsl:value-of select="$Izz4"/></zz>
+							<xy><xsl:value-of select="$Ixy4"/></xy>
+							<yz><xsl:value-of select="$Iyz4"/></yz>
+							<xz><xsl:value-of select="$Ixz4"/></xz>
+					</i>
+					<ignore idref="body2"/>
+					<ignore idref="body3"/>
+					<ignore idref="body5"/>
+					<ignore idref="body6"/>
+					<m><xsl:value-of select="$m4"/></m>
+				</body>
+				<frame id="frame5"/>
+				<body id="body5">
+					<cm>
+							<x><xsl:value-of select="$x5"/></x>
+							<y><xsl:value-of select="$y5"/></y>
+							<z><xsl:value-of select="$z5"/></z>
+					</cm>
+					<i>
+							<xx><xsl:value-of select="$Ixx5"/></xx>
+							<yy><xsl:value-of select="$Iyy5"/></yy>
+							<zz><xsl:value-of select="$Izz5"/></zz>
+							<xy><xsl:value-of select="$Ixy5"/></xy>
+							<yz><xsl:value-of select="$Iyz5"/></yz>
+							<xz><xsl:value-of select="$Ixz5"/></xz>
+					</i>
+					<ignore idref="body4"/>
+					<ignore idref="body6"/>
+					<m><xsl:value-of select="$m5"/></m>
+				</body>
+				<frame id="frame6"/>
+				<body id="body6">
+					<cm>
+							<x><xsl:value-of select="$x6"/></x>
+							<y><xsl:value-of select="$y6"/></y>
+							<z><xsl:value-of select="$z6"/></z>
+					</cm>
+					<i>
+							<xx><xsl:value-of select="$Ixx6"/></xx>
+							<yy><xsl:value-of select="$Iyy6"/></yy>
+							<zz><xsl:value-of select="$Izz6"/></zz>
+							<xy><xsl:value-of select="$Ixy6"/></xy>
+							<yz><xsl:value-of select="$Iyz6"/></yz>
+							<xz><xsl:value-of select="$Ixz6"/></xz>
+					</i>
+					<ignore idref="body4"/>
+					<ignore idref="body5"/>
+					<m><xsl:value-of select="$m6"/></m>
+				</body>
+				<frame id="frame7"/>
+				<fixed id="fixed0">
+					<frame>
+						<a idref="world"/>
+						<b idref="body0"/>
+					</frame>
+					<rotation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</translation>
+				</fixed>
+				<fixed id="fixed1">
+					<frame>
+						<a idref="body0"/>
+						<b idref="frame0"/>
+					</frame>
+					<rotation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</translation>
+				</fixed>
+				<revolute id="joint0">
+					<frame>
+						<a idref="frame0"/>
+						<b idref="frame1"/>
+					</frame>
+					<max>160</max>
+					<min>-160</min>
+					<speed>320</speed>
+				</revolute>
+				<fixed id="fixed2">
+					<frame>
+						<a idref="frame1"/>
+						<b idref="body1"/>
+					</frame>
+					<rotation>
+						<x>-90</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x><xsl:value-of select="$a1"/></x>
+						<y>0</y>
+						<z><xsl:value-of select="$d1"/></z>
+					</translation>
+				</fixed>
+				<revolute id="joint1">
+					<frame>
+						<a idref="body1"/>
+						<b idref="frame2"/>
+					</frame>
+					<max>45</max>
+					<min>-225</min>
+					<speed>250</speed>
+				</revolute>
+				<fixed id="fixed3">
+					<frame>
+						<a idref="frame2"/>
+						<b idref="body2"/>
+					</frame>
+					<rotation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x><xsl:value-of select="$a2"/></x>
+						<y>0</y>
+						<z><xsl:value-of select="$d2"/></z>
+					</translation>
+				</fixed>
+				<revolute id="joint2">
+					<frame>
+						<a idref="body2"/>
+						<b idref="frame3"/>
+					</frame>
+					<max>225</max>
+					<min>-45</min>
+					<speed>270</speed>
+				</revolute>
+				<fixed id="fixed4">
+					<frame>
+						<a idref="frame3"/>
+						<b idref="body3"/>
+					</frame>
+					<rotation>
+						<x>90</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x><xsl:value-of select="$a3"/></x>
+						<y>0</y>
+						<z><xsl:value-of select="$d3"/></z>
+					</translation>
+
+				</fixed>
+				<revolute id="joint3">
+					<frame>
+						<a idref="body3"/>
+						<b idref="frame4"/>
+					</frame>
+					<max>170</max>
+					<min>-110</min>
+					<speed>300</speed>
+				</revolute>
+				<fixed id="fixed5">
+					<frame>
+						<a idref="frame4"/>
+						<b idref="body4"/>
+					</frame>
+					<rotation>
+						<x>-90</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x><xsl:value-of select="$a4"/></x>
+						<y>0</y>
+						<z><xsl:value-of select="$d4"/></z>
+					</translation>
+				</fixed>
+				<revolute id="joint4">
+					<frame>
+						<a idref="body4"/>
+						<b idref="frame5"/>
+					</frame>
+					<max>100</max>
+					<min>-100</min>
+					<speed>200</speed>
+				</revolute>
+				<fixed id="fixed6">
+					<frame>
+						<a idref="frame5"/>
+						<b idref="body5"/>
+					</frame>
+					<rotation>
+						<x>90</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x><xsl:value-of select="$a5"/></x>
+						<y>0</y>
+						<z><xsl:value-of select="$d5"/></z>
+					</translation>
+				</fixed>
+				<revolute id="joint5">
+					<frame>
+						<a idref="body5"/>
+						<b idref="frame6"/>
+					</frame>
+					<max>266</max>
+					<min>-266</min>
+					<speed>532</speed>
+				</revolute>
+				<fixed id="fixed7">
+					<frame>
+						<a idref="frame6"/>
+						<b idref="body6"/>
+					</frame>
+					<rotation>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</rotation>
+					<translation>
+						<x><xsl:value-of select="$a6"/></x>
+						<y>0</y>
+						<z><xsl:value-of select="$d6"/></z>
+					</translation>
+				</fixed>
+			</model>
+		</rlmdl>
+	</xsl:template>
+</xsl:stylesheet>

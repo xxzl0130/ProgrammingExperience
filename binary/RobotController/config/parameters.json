@@ -1,0 +1,39 @@
+{
+    "Parameters": [
+        {
+            "IndexGroup": 1,
+            "IndexOffset": 1,
+            "Name": "a1",
+            "Type": "double",
+            "Value": 0.52
+        },
+        {
+            "IndexGroup": 1,
+            "IndexOffset": 2,
+            "Name": "a2",
+            "Type": "double",
+            "Value": 1
+        },
+        {
+            "IndexGroup": 1,
+            "IndexOffset": 5,
+            "Name": "a5",
+            "Type": "double",
+            "Value": 3
+        },
+        {
+            "IndexGroup": 1,
+            "IndexOffset": 3,
+            "Name": "a3",
+            "Type": "string",
+            "Value": "1.0"
+        },
+        {
+            "IndexGroup": 2,
+            "IndexOffset": 4,
+            "Name": "a4",
+            "Type": "string",
+            "Value": "1.0"
+        }
+    ]
+}

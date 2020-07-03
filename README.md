@@ -17,8 +17,10 @@ zaxs0130@gmail.com
 __注意：binary和source文件夹下的任何文件/项目/素材如无特别说明均禁止商用，版权归属本人或与本人有协议的相关单位，盗版必究。__  
 
 # 项目经历
+* [机器人上位机控制器](/document/RobotControllerGUI.md)
 * [CodeX重装芯片计算器](/document/CodeX.md)  
 * [餐巾折叠机上位机](/document/NapkinFolder.md)  
 * [布料上料系统](/document/FeedingSystem.md)  
 * [无人机编队飞行](/document/FormationFlight.md)  
 * [少女前线代理工具系列](/document/GirlsFrontlineProxy.md)  
+* [分布式仿真系统](/document/DIS.md)

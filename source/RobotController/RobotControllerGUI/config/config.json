@@ -1,0 +1,7 @@
+{
+    "flashTime": "2330",
+    "model": "./TR_nobox.xml",
+    "netID": "127.0.0.1.1.1",
+    "port": "0x8888",
+	"parameterJson":"./parameters.json"
+}
